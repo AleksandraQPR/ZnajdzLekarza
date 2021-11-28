@@ -21,10 +21,10 @@ namespace ZnajdzLekarza.Models
 
         public string Education { get; set; }
 
-        public List<Localization> Localizations { get; set; }
+        public IList<Localization> Localizations { get; set; }
 
-        public List<Specialization> Specializations { get; set; }
+        public IList<Specialization> Specializations { get; set; }
 
-        public List<Service> Services { get; set; }
+        public IList<Service> Services { get; set; }
     }
 }
