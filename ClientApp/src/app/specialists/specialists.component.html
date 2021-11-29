@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngFor="let specialist of specialists">
   <div class="col-md-1"></div>
   <div class="col-md-4 box">
     <div>
@@ -10,7 +10,7 @@
     </div>
 
     <div class="standard-info">
-      Adres: ul. {{localization.streetName}} {{localization.number}}, {{localization.city}}
+      Adres: ul. 
       <br />
       Konsultacja ginekologiczna 180 zł
     </div>

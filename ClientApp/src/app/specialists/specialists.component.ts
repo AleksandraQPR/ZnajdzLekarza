@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Inject, OnInit } from '@angular/core';
+import { Specialist } from '../Interfaces/specialist';
 
 @Component({
   selector: 'app-specialists',
@@ -7,49 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpecialistsComponent implements OnInit {
 
-  public specialist: Specialist = {
-    id: 1,
-    lastName: 'Nazwisko1',
-    firstName: 'Imię1',
-    email: 'email1@example.com',
-    phoneNumber: 111111111
-  };
+  public specialists: Specialist[] = new Array();
 
-  public localization: Localization = {
-    id: 1,
-    streetName: 'Ulica1',
-    number: '00',
-    zipCode: 11111,
-    city: 'Miasto1'
+  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+    http.get<Specialist[]>(baseUrl + 'specialist').subscribe(result => {
+      this.specialists = result;
+    }, error => console.error(error));
   }
 
-  constructor() { }
-  
   ngOnInit() {
   }
-
 }
-
-interface Specialist {
-  id: number;
-  lastName: string;
-  firstName: string;
-  email: string;
-  phoneNumber: number;
-  description?: string;
-  education?: string;
-}
-
-interface Localization {
-  id: number;
-  streetName: string;
-  number: string;
-  zipCode: number;
-  city: string;
-}
-
-
-
-
-
-
