@@ -9,9 +9,11 @@
       </div>
     </div>
 
-    <div class="standard-info">
-      Adres: ul. 
-      <br />
+    <div class="standard-info" *ngFor ="let localization of specialist.localizations">
+      Adres: ul. {{localization.streetName}}
+    </div>
+    <br />
+    <div>
       Konsultacja ginekologiczna 180 zł
     </div>
 
