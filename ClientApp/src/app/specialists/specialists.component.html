@@ -5,16 +5,19 @@
       <div class="floatLeft"><img src="assets\personPlaceholder.jpg"></div>
       <div class="main-info">
         <div>{{specialist.firstName}} {{specialist.lastName}}</div>
-        <div>Ginekolog</div>
+        <div *ngFor="let specialization of specialist.specializations">
+        {{specialization.name}}
+        </div>
       </div>
     </div>
 
     <div class="standard-info" *ngFor ="let localization of specialist.localizations">
-      Adres: ul. {{localization.streetName}}
+      Adres: {{localization.streetName}} {{localization.streetNumber}}
+      <br />
+      {{localization.zipCode}} {{localization.city}}
     </div>
-    <br />
-    <div>
-      Konsultacja ginekologiczna 180 zł
+    <div *ngFor="let service of specialist.services">
+      {{service.name}}
     </div>
 
     <p>
