@@ -37,7 +37,7 @@ namespace ZnajdzLekarza.Controllers
             Services = new List<Service> { new Service
                 {
                     Id = 1,
-                    Name = "Usługia 1"
+                    Name = "Usługa 1"
                 }
             }
         };
@@ -67,7 +67,7 @@ namespace ZnajdzLekarza.Controllers
             Services = new List<Service> { new Service
                 {
                     Id = 2,
-                    Name = "Usługia 2"
+                    Name = "Usługa 2"
                 }
             }
         };
