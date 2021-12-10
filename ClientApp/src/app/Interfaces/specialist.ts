@@ -11,7 +11,7 @@ export interface Specialist {
   description?: string;
   education?: string;
   localizations: Localization[];  
-  specializations?: Specialization[]; 
-  services?: Service[];  
+  specializations: Specialization[]; 
+  services: Service[];  
 
 }
