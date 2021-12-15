@@ -1,0 +1,38 @@
+<div class="row" *ngFor="let specialist of specialists">
+
+  <div class="col-md-1"></div>
+
+  <div class="col-md-4 box">
+      <img src="assets\personPlaceholder.jpg" class="floatLeft">
+      <div class="main-info">
+        {{specialist.firstName}} {{specialist.lastName}}
+        <div *ngFor="let specialization of specialist.specializations">
+        {{specialization.name}}
+        </div>
+      </div>
+    <div class="standard-info">
+      <div *ngFor="let localization of specialist.localizations">
+        Adres: {{localization.streetName}} {{localization.streetNumber}}
+        <br />
+        {{localization.zipCode}} {{localization.city}}
+      </div>
+      <div *ngFor="let service of specialist.services">
+        {{service.name}}
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary button-position">Umów wizytę</button>
+  </div>
+
+  <div class="col-md-1"></div>
+
+  <div class="col-md-5 box">
+    <div>KALENDARZ</div>
+    <button type="button" class="btn btn-primary button-position">Zobacz pełny kalendarz</button>
+  </div>
+
+  <div class="col-md-1"></div>
+
+</div>
+
+
+

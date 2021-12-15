@@ -1,0 +1,33 @@
+.box {
+  height: 320px;
+  padding: 25px;
+  margin-top: 35px;
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .18);
+}
+
+.standard-info {
+  clear: both;
+  font-size: 15px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.main-info {
+   font-weight: bold;
+   font-size: 18px;
+   float:left;
+   padding: 15px;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.button-position{
+    position: absolute;
+    left: 25px;
+    top: 260px;
+    z-index: 1;
+}
+
+
