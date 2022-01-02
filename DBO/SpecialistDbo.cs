@@ -21,11 +21,11 @@ namespace ZnajdzLekarza.DBO
 
         public string Education { get; set; }
 
-        public virtual ICollection<LocalizationDbo> LocalizationsDbos { get; set; }
+        public virtual ICollection<LocalizationDbo> LocalizationDbos { get; set; }
 
-        public virtual ICollection<SpecializationDbo> SpecializationsDbos { get; set; }
+        public virtual ICollection<SpecializationDbo> SpecializationDbos { get; set; }
 
-        public virtual ICollection<ServiceDbo> ServicesDbos { get; set; }
+        public virtual ICollection<ServiceDbo> ServiceDbos { get; set; }
 
         public virtual ICollection<VisitDbo> VisitDbos { get; set; }
     }
