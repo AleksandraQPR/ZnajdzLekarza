@@ -26,7 +26,7 @@ namespace ZnajdzLekarza.DBO
         [MaxLength(50)]
         public string City { get; set; }
 
-        public virtual ICollection<Visit> Visits { get; set; }  // czy to powinno tutaj być??
+        public virtual ICollection<Visit> Visits { get; set; }
         
         public virtual ICollection<Specialist> Specialists { get; set; }
     }
